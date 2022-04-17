@@ -1,79 +1,105 @@
+/* Reset CSS */
 * {
-  padding: 0;
-  margin: 0;
+ padding: 0;
+ margin: 0;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 21px;
+/* Style cơ bản cho website */
+header .banner {
+
+ background-color: #f5f5f5;
+}
+.toggle{
+ display: none;
+}
+header .menu li {
+ margin-left: 30px;
+ cursor: pointer;
+ transition: .5s;
 }
 
-header .header-left ul,
-header .header-right ul {
-  padding: 15px 30px 0px 30px;
-  display: flex;
+header .menu li:hover {
+ color: red;
+ transform: scale(1.1);
 }
 
-header .header-left ul li,
-header .header-right ul li {
-  margin-right: 30px;
-  list-style: none;
+header .menu li,
+header .menu div {
+ display: inline-block;
 }
 
-main {
-  margin: 30px 0;
+header .menu .menu-left {
+ display: flex;
 }
 
-main .banner {
-  position: relative;
+header .menu .menu-right {
+ display: flex;
 }
 
-main .banner img {
-  width: 100%;
-  z-index: 8;
+header .menu ul {
+ margin-left: -30px;
+ padding: 0 30px;
+ display: flex;
+ justify-content: space-between;
 }
 
-main .banner .content-banner {
-  position: absolute;
-  top: 38%;
-  left: 50px;
-  transform: translateY(-100%);
-  z-index: 9;
-  color: #fff;
-}
-
-main .banner .content-banner h1 {
-  font-size: 40px;
-  font-weight: 800;
+header .banner-content {
+ position: absolute;
+ top: 25%;
+ color: white;
+ padding: 35px;
 }
 
 main .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 250px 60px 250px;
-  padding: 30px 50px;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 250px 60px 250px;
+ padding: 30px 50px;
 }
 
 main .cards .card:nth-child(3) img {
-  grid-column: 3/4;
-  grid-row: 1/4;
-  height: 415px;
-
-}
-
-footer {
-  border-top: 1px solid #000;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 30px 50px;
-}
-
-footer div {
-  max-width: 380px;
+ grid-column: 3/4;
+ grid-row: 1/4;
+ height: 415px;
 
 }
 
 main .title-body {
-  padding: 30px 50px;
+ padding: 30px 50px;
+}
+
+footer {
+ border-top: 1px solid #000;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ padding: 30px 50px;
+}
+
+footer div {
+ max-width: 380px;
+
+}
+@media only screen and (max-width: 480px) {
+ .toggle{
+  display: block;
+ }
+ header .menu {
+  display: none;
+  
+ }
+ header .menu .menu-left {
+  display: block;
+ }
+ 
+ header .menu .menu-right {
+  display: block;
+ }
+ 
+ header .menu ul {
+  margin-left: -30px;
+  padding: 0 30px;
+  display: block;
+  justify-content: space-between;
+ }
+ 
 }
